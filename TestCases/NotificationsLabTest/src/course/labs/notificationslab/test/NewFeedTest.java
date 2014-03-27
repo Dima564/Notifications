@@ -32,6 +32,7 @@ public class NewFeedTest extends
 
 		solo.sleep(shortDelay);
 
+
 		// Click on Make Tweets New
 		solo.clickOnView(solo
 				.getView(course.labs.notificationslab.R.id.rejuv_tweets_button));
