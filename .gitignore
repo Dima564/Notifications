@@ -1,4 +1,8 @@
 project.properties
 gen/
 out/
+libs/
+.classpath
+.project
+.idea
 *.iml
