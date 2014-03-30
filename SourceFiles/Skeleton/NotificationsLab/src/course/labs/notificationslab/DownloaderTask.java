@@ -163,16 +163,15 @@ public class DownloaderTask extends AsyncTask<String, Void, String[]> {
 
 						log("Entered result receiver's onReceive() method");
 
-						// TODO: Check whether the result code is RESULT_OK
 
-						if (/*change this*/ true) {
+
+						if (getResultCode() == Activity.RESULT_OK) {
 
 							// TODO:  If so, create a PendingIntent using the
 							// restartMainActivityIntent and set its flags
 							// to FLAG_UPDATE_CURRENT
-							
-							final PendingIntent pendingIntent = null;
-							
+
+							final PendingIntent pendingIntent = PendingIntent.getActivity(mParentActivity,0,restartMainActivtyIntent,PendingIntent.FLAG_UPDATE_CURRENT);
 
 
 							// Uses R.layout.custom_notification for the
@@ -182,6 +181,8 @@ public class DownloaderTask extends AsyncTask<String, Void, String[]> {
 							RemoteViews mContentView = new RemoteViews(
 									mApplicationContext.getPackageName(),
 									R.layout.custom_notification);
+
+
 
 							// TODO: Set the notification View's text to
 							// reflect whether or the download completed
@@ -195,8 +196,13 @@ public class DownloaderTask extends AsyncTask<String, Void, String[]> {
 							// android.R.drawable.stat_sys_warning
 							// for the small icon. You should also setAutoCancel(true). 
 
-							Notification.Builder notificationBuilder = null;
+							Notification.Builder notificationBuilder = new Notification.Builder(context)
+                                    .setContentTitle("You received a message")
+                                    .setSmallIcon(android.R.drawable.stat_sys_warning);
 
+                            NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+                            mNotificationManager.notify(0,notificationBuilder.build());
 							// TODO: Send the notification
 
 							

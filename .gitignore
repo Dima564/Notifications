@@ -1,1 +1,8 @@
+.html
+gen/
+.idea/
+.iml
+*.iml
+out/
+Writeup/
 
