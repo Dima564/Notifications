@@ -9,9 +9,11 @@ Writeup/
 .classpath
 *.apk
 *.ap_
-
+project.properties
 *.dex
-
+proguard-project.txt
+lint.xml
+libs/
 *.class
 
 bin/
