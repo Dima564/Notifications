@@ -5,7 +5,8 @@ gen/
 *.iml
 out/
 Writeup/
-
+.project
+.classpath
 *.apk
 *.ap_
 
