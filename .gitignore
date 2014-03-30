@@ -8,7 +8,8 @@ Writeup/
 .project
 .classpath
 *.apk
-*.ap_
+*.ap
+*.properties
 project.properties
 *.dex
 proguard-project.txt
