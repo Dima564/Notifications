@@ -6,3 +6,25 @@ gen/
 out/
 Writeup/
 
+*.apk
+*.ap_
+
+*.dex
+
+*.class
+
+bin/
+
+.gradle/
+build/
+
+local.properties
+
+proguard/
+.ipr
+*.iws
+local.properties
+
+# Generic Android ignores
+bin/
+target
